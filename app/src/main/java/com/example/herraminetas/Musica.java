@@ -26,6 +26,7 @@ public class Musica extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -35,6 +36,9 @@ public class Musica extends Fragment {
         View view = inflater.inflate(R.layout.fragment_musica, container, false);
 
         botonMusica = (ImageView) view.findViewById(R.id.musica);
+
+        if (encendida) botonMusica.setBackgroundColor(Color.YELLOW);
+
 
         botonMusica.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,4 +62,5 @@ public class Musica extends Fragment {
         Intent miReproductor = new Intent(getActivity(), ServicioMusica.class);
         getActivity().stopService(miReproductor);
     }
+
 }

@@ -27,6 +27,8 @@ public class Linterna extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_linterna, container, false);
 
         botonCamara = (ImageView) view.findViewById(R.id.linterna);
+        if (encendido) botonCamara.setBackgroundColor(Color.YELLOW);
+
         botonCamara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
